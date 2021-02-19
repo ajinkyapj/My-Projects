@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Distributed Cloud for data storage</title>
+    <style>
+                                        .center {               
+                                                  margin: auto;
+                                                  width: 40%;
+                                                  height:default;
+                                                  padding: 10px;
+                                                }
+                                        .content {
+                                                  margin-left: 50px;
+                                                  padding-left: 10px;
+                                                }
+                                          body {
+                                            margin: 0;
+                                            font-family: Arial, Helvetica, sans-serif;
+                                            background-color: #707070;
+                                            }
+                                    .container {
+                                                  border-radius: 5px;
+                                                  background-color: #f2f2f2;
+                                                  padding: 20px;
+                                                }
+
+                                                .col-25 {
+                                                  float: left;
+                                                  left-padding:50%;
+                                                  width: 25%;
+                                                  margin-top: 6px;
+                                                }
+
+                                                .col-75 {
+                                                  float: left;
+                                                  width: 75%;
+                                                  margin-top: 6px;
+                                                }
+
+
+                                                .row:after {
+                                                  content: "";
+                                                  display: table;
+                                                  clear: both;
+                                                }
+    </style>
+</head>
+<body>
+    <div style="background-image: url('1.png');">
+    <div class="content">
+    <div class="center">
+    <form action ="/download" method="POST" enctype="multipart/form-data">
+    <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp File Uploaded</h1>
+    <div class="container">
+        <div class="row">
+        <div class="col-25">
+        <label>FileName</label>
+        </div>
+        <div class="col-75">
+        <p><%= fileName %> </p>
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="col-25">
+        <label>Link To view file</label>
+        </div>
+        <div class="col-75">
+        <p><a href="https://ipfs.io/ipfs/<%= fileHash %>"><%= fileName %> </a></p>
+        
+        </div>
+        </div>
+   
+        
+ </div>
+    </form>
+         </div>
+        </div>          
+         
+       
+</body>
+</html>
